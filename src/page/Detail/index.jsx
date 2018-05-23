@@ -23,7 +23,7 @@ const headTxt = (type)=>{
     case 'dev':
         return '测试'
     default:
-        return '错误'
+        return '加载中'
   }
 }
 

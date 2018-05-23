@@ -1,8 +1,9 @@
 import React , { Component } from 'react';
-import { BrowserRouter as Router,Route,Switch,Redirect } from 'react-router-dom';
+import { HashRouter as Router,Route,Switch,Redirect } from 'react-router-dom';
 import { connect } from "react-redux";
 
 import asyncComponent from "../utils/asyncComponent.jsx";
+import baseurl from "../utils/baseurl";
 import Tools from "../utils";
 import { saveUserKey, postCheckUser, getMessage } from '../actions';
 
@@ -15,7 +16,6 @@ const Message = asyncComponent(() => import("../containers/showMessage"));
 const NoMatch = asyncComponent(() => import("../page/NoMatch"));
 const Collect = asyncComponent(() => import("../containers/showCollect"));
 const Creact = asyncComponent(() => import("../containers/creactTopic"));
-
 // const Test = asyncComponent(() => import("../components/MsgItem"));
 
 class RouterConfig extends Component{
@@ -26,13 +26,13 @@ class RouterConfig extends Component{
     // const loginflag = Tools.localItem('accesstoken');
     const loginflag = this.props.loginflag;
     return(
-      <Router >
+      <Router basename={`${baseurl}`}>
         <div style={{position: 'fixed', height: '100%', width: '100%', top: 0 }}>
             <Switch>
               {/* /  => topics */}
-              <Route exact path='/' render={() => <Redirect to='/topics' />} />
+              <Route exact path='/' render={() => <Redirect to='/topics' />} /> 
               {/* 首页 */}
-              <Route exact path="/topics" component={Topics}/>
+              <Route path="/topics" component={Topics}/>
               <Route path="/topics/:id" component={Detail}/>
               {/* 我的 */}
               <Route path="/mine" render={() => (
