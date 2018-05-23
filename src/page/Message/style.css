@@ -1,0 +1,14 @@
+.msg-item{
+  /* height: 40px; */
+  line-height: 28px;
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+}
+.msg-txt{
+  color: #108ee9;
+  padding: 0 5px;
+}
+.msg-author{
+  color: #108ee9;
+  padding-right: 5px;
+}

@@ -1,0 +1,19 @@
+.reply-area-wrap{
+  border: 1px solid #ccc;
+  clear: both;
+  overflow: hidden;
+  padding: 5px;
+  /* margin-bottom: 5px;
+  margin-right: 5px;
+  margin-left: 5px; */
+  background: #fff;
+}
+.reply-area-wrap .am-list-item{
+  padding-left: 0px;
+}
+.reply-area-wrap .am-textarea-control{
+  padding: 0px;
+}
+.am-textarea-control textarea{
+  font-size: 14px;
+}

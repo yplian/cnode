@@ -1,0 +1,92 @@
+/* 修改样式 */
+.am-tabs-pane-wrap {
+    overflow: hidden;
+}
+.am-tab-bar-tab-title{
+    margin: 0 !important;
+}
+.markdown-body p, .markdown-body blockquote, .markdown-body ul, .markdown-body ol, .markdown-body dl, .markdown-body table, .markdown-body pre{
+    margin-bottom: 7px;
+}
+/* 用户头像 */
+.avatar_img{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+/* 公用 */
+.bg-white{
+    background: #fff;
+}
+.font-gray{
+    color: #777;
+}
+.font-red{
+    color: red;
+}
+.font-org{
+    color: rgb(255, 91, 5);
+}
+ul,li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.padding-LR15{
+    padding: 0 15px;
+}
+.padding-LR20{
+    padding: 0 20px;
+}
+.padding-R20{
+    padding-right: 20px;
+}
+.border-bottom{
+    border-bottom: 1px solid #ccc;
+}
+
+/* list-item */
+.list-item{
+    height: 98%;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+}
+.item-tab-type{
+    padding: 0 5px;
+}
+.item-author-img{
+    padding: 0 5px;
+}
+.item-author-img img{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+.item-title{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.item-title a{
+    color: #333;
+}
+.item-info{
+    padding: 0 5px;
+    text-align: right;
+    font-size: 12px;
+}
+.item-info-count{
+    min-width: 80px;
+    padding: 0 5px;
+    display: inline-block;
+    text-align: center;
+}
+.item-info-time{
+    min-width: 60px;
+    padding: 0 5px;
+    display: inline-block;
+    color: rgb(92, 90, 90);
+}
+  
+  

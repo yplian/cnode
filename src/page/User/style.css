@@ -1,0 +1,17 @@
+.avatar_img{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+.avatar_name{
+  font-size: 14px;
+  color: rgb(255, 91, 5);
+  font-weight: bold;
+  margin: 10px;
+}
+.mine-list .am-list-content{
+  font-size: 14px !important;
+}
+.mine-list .am-list-item .am-list-line .am-list-extra{
+  font-size: 14px !important;  
+}

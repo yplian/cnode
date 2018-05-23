@@ -1,0 +1,18 @@
+.head{
+  background: #FFF;
+  overflow: hidden;
+}
+h2{
+  text-align: center;
+}
+.author{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.author span{
+  height: 25px;
+  line-height: 25px;
+  padding: 0 5px;
+  color: #838383;
+}

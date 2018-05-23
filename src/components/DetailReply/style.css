@@ -1,0 +1,25 @@
+.replay-markdown-body {
+  padding: 0px !important;
+}
+.replay{
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+  padding: 7px 10px;
+}
+.replay-author-img{
+  align-self: flex-start;
+}
+.replay-author-img img{
+  width: 30px;
+  height: 30px;
+}
+.replay-author-wrap{
+  margin-bottom: 2px;
+  color: #838383;
+}
+.replay-author-wrap a{
+  color: rgb(255, 91, 5)
+}
+.iconfont{
+  font-size: 18px;
+}
