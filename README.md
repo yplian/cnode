@@ -27,6 +27,16 @@ npm run build
 
 [Ant Design Mobile of React](https://mobile.ant.design/docs/react/introduce-cn)
 
+## 部分功能截图
+
+![0](./doc/0.png)
+![1](./doc/1.png)
+![2](./doc/2.png)
+![3](./doc/3.png)
+![4](./doc/4.png)
+![5](./doc/5.png)
+![6](./doc/6.png)
+
 ## 实现功能
 
 + 主题预览、首页预览

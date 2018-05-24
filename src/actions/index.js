@@ -143,7 +143,6 @@ export const postDetailUps = (id,key) => {
     .then(response => response.json())
     .then(json => {
       dispatch(detailUpsInfo(json));
-      console.log(json);
     })
   }
 }
@@ -170,7 +169,7 @@ export const postDetailReply = (topic_id,accesstoken,content,reply_id=null) => {
       body:`accesstoken=${accesstoken}&content=${content}${reply}`
     })
     .then(response => response.json())
-    .then(json => {dispatch(detailRepliesInfo(json));console.log(json);})
+    .then(json => {dispatch(detailRepliesInfo(json));})
   }
 }
 export const detailRepliesInfo = (replyInfo) => {
