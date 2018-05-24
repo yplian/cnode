@@ -150,16 +150,17 @@ ansi-styles@^3.0.0, ansi-styles@^3.2.1:
   dependencies:
     color-convert "^1.9.0"
 
-antd-mobile@^2.1.6:
-  version "2.1.9"
-  resolved "https://registry.yarnpkg.com/antd-mobile/-/antd-mobile-2.1.9.tgz#8ef078fa643b2ccca4678c30a3300751aaaa8879"
+antd-mobile@2.1.6:
+  version "2.1.6"
+  resolved "https://registry.yarnpkg.com/antd-mobile/-/antd-mobile-2.1.6.tgz#dec30762d9c53c054aa6a0e32ec0ebf1c9081673"
   dependencies:
-    array-tree-filter "~2.1.0"
+    array-tree-filter "~2.0.0"
     babel-runtime "6.x"
     classnames "^2.2.1"
     normalize.css "^7.0.0"
     rc-checkbox "~2.0.0"
-    rc-collapse "~1.9.1"
+    rc-collapse "~1.7.0"
+    rc-drawer "~0.4.9"
     rc-slider "~8.2.0"
     rc-swipeout "~2.0.0"
     react-native-camera-roll-picker "^1.2.1"
@@ -168,10 +169,9 @@ antd-mobile@^2.1.6:
     react-native-menu "^0.23.0"
     rmc-calendar "^1.0.0"
     rmc-cascader "~5.0.0"
-    rmc-date-picker "~6.0.7"
+    rmc-date-picker "~6.0.0"
     rmc-dialog "^1.0.1"
-    rmc-drawer "^0.4.11"
-    rmc-feedback "^2.0.0"
+    rmc-feedback "^1.0.0"
     rmc-input-number "^1.0.0"
     rmc-list-view "^0.11.0"
     rmc-notification "~1.0.0"
@@ -284,9 +284,9 @@ array-tree-filter@1.0.x:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/array-tree-filter/-/array-tree-filter-1.0.1.tgz#0a8ad1eefd38ce88858632f9cc0423d7634e4d5d"
 
-array-tree-filter@~2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/array-tree-filter/-/array-tree-filter-2.1.0.tgz#873ac00fec83749f255ac8dd083814b4f6329190"
+array-tree-filter@~2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/array-tree-filter/-/array-tree-filter-2.0.0.tgz#20fbc2d5a0de83242c0a9eb90894d4bfb7e2a69e"
 
 array-union@^1.0.1:
   version "1.0.2"
@@ -5708,14 +5708,22 @@ rc-checkbox@~2.0.0:
     prop-types "15.x"
     rc-util "^4.0.4"
 
-rc-collapse@~1.9.1:
-  version "1.9.2"
-  resolved "https://registry.yarnpkg.com/rc-collapse/-/rc-collapse-1.9.2.tgz#baa88a724ebbf444ad1f7776fe912f2f894e4099"
+rc-collapse@~1.7.0:
+  version "1.7.7"
+  resolved "https://registry.yarnpkg.com/rc-collapse/-/rc-collapse-1.7.7.tgz#16c9fe691f0191f16c9c2eda39989bfc1a19fa2b"
   dependencies:
     classnames "2.x"
     css-animation "1.x"
     prop-types "^15.5.6"
     rc-animate "2.x"
+
+rc-drawer@~0.4.9:
+  version "0.4.11"
+  resolved "https://registry.yarnpkg.com/rc-drawer/-/rc-drawer-0.4.11.tgz#94faaec28183ab90f135f0dfe244dca14cfee799"
+  dependencies:
+    babel-runtime "6.x"
+    classnames "^2.2.4"
+    prop-types "^15.5.10"
 
 rc-gesture@^0.0.15:
   version "0.0.15"
@@ -6309,7 +6317,7 @@ rmc-cascader@~5.0.0:
     babel-runtime "6.x"
     rmc-picker "~5.0.0"
 
-rmc-date-picker@~6.0.0-alpha.10, rmc-date-picker@~6.0.7:
+rmc-date-picker@~6.0.0, rmc-date-picker@~6.0.0-alpha.10:
   version "6.0.8"
   resolved "https://registry.yarnpkg.com/rmc-date-picker/-/rmc-date-picker-6.0.8.tgz#9aab87b3aa8dc9c5a57349d8f0b05de4e8f4808a"
   dependencies:
@@ -6323,13 +6331,12 @@ rmc-dialog@^1.0.1:
     babel-runtime "6.x"
     rc-animate "2.x"
 
-rmc-drawer@^0.4.11:
-  version "0.4.11"
-  resolved "https://registry.yarnpkg.com/rmc-drawer/-/rmc-drawer-0.4.11.tgz#9a8c6125a4ccd37b916f32f7e8b477d11d413ee3"
+rmc-feedback@^1.0.0:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/rmc-feedback/-/rmc-feedback-1.0.4.tgz#fba066059ae2057ac0e0b53ea7ce982c8f4f7f19"
   dependencies:
     babel-runtime "6.x"
-    classnames "^2.2.4"
-    prop-types "^15.5.10"
+    classnames "^2.2.5"
 
 rmc-feedback@^2.0.0:
   version "2.0.0"

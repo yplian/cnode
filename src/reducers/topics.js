@@ -1,4 +1,4 @@
-const topics = (state = {data:[],askData:[],shareData:[],devData:[],tab:'all',page:1,creactData_success:false,creactData_error_msg:'',creactData_topic_id:''}, action) => {
+const topics = (state = {data:[],askData:[],shareData:[],jobData:[],tab:'all',page:1,creactData_success:false,creactData_error_msg:'',creactData_topic_id:''}, action) => {
   switch (action.type) {
     case 'TOPICS_DATA':
       if(action.tab === 'all'){
@@ -49,19 +49,19 @@ const topics = (state = {data:[],askData:[],shareData:[],devData:[],tab:'all',pa
             page:action.page,
           }
         }
-      }else if(action.tab === 'dev'){
+      }else if(action.tab === 'job'){
         if(action.page <= 1){
           return {
             ...state,
-            devData:action.data,
+            jobData:action.data,
             tab:action.tab,
             page:action.page,
           }
         }else{
-          let newData = state.devData.concat(action.data);
+          let newData = state.jobData.concat(action.data);
           return {
             ...state,
-            devData:newData,
+            jobData:newData,
             page:action.page,
           }
         }

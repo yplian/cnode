@@ -7,7 +7,7 @@ const tabs = [
   { title: '全部' , tab:'all' },
   { title: '分享' , tab:'share' },
   { title: '问答' , tab:'ask' },
-  { title: '测试' , tab:'dev' },
+  { title: '招聘' , tab:'job' },
 ];
 
 class Index extends Component{
@@ -21,7 +21,7 @@ class Index extends Component{
     this.props.init()
   }
   render(){
-    const {data,askData,shareData,devData,loginflag,avatar_url} = this.props;
+    const {data,askData,shareData,jobData,loginflag,avatar_url} = this.props;
     return(
       <div style={{height:this.state.height + 45}}>
         <NavBar  
@@ -50,7 +50,7 @@ class Index extends Component{
       
             <TopicList tab={'ask'} data={askData} />
 
-            <TopicList tab={'dev'} data={devData} />
+            <TopicList tab={'job'} data={jobData} />
 
           </Tabs>
           

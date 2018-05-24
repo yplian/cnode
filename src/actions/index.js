@@ -353,7 +353,7 @@ export const postTopicCollect = (accesstoken,topic_id) => {
       body:`accesstoken=${accesstoken}&topic_id=${topic_id}`
     })
     .then(response => response.json())
-    .then(json => {dispatch(topicCollect(json));console.log(json)})
+    .then(json => {dispatch(topicCollect(json));})
   }
 }
 
@@ -382,7 +382,7 @@ export const postTopicDeCollect = (accesstoken,topic_id) => {
       body:`accesstoken=${accesstoken}&topic_id=${topic_id}`
     })
     .then(response => response.json())
-    .then(json => {dispatch(topicDeCollect(json));console.log(json)})
+    .then(json => {dispatch(topicDeCollect(json));})
   }
 }
 /* 

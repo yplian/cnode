@@ -7,7 +7,7 @@ const mapStateToProps = (state, ownProps) => {
     data: state.topics.data,
     shareData: state.topics.shareData,
     askData: state.topics.askData,
-    devData: state.topics.devData,
+    jobData: state.topics.jobData,
     loginflag: state.user.summary.success,
     avatar_url: state.user.summary.avatar_url,
     tabIndex: state.utils.tabIndex,

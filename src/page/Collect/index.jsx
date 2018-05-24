@@ -26,7 +26,7 @@ class Collect extends Component {
          >收藏</NavBar>
 
         <div style={{height:this.state.height,overflow:'auto'}}>
-          <ul className='tab-item'>
+          <ul className='tab-item ulnone'>
             {
               data.map((el) =>{
                 return <Item key={el.id} data={el}  />

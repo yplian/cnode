@@ -11,7 +11,7 @@ class TopicList extends Component{
     const {data} = this.props;
     return(
       <div ref={(box)=>this.box = box} style={{overflowY:'auto',height:'100%'}}>
-        <ul className='tab-item'>
+        <ul className='tab-item ulnone'>
           {
             data.map((el) =>{
               return <TopicItem key={el.id} data={el}  />

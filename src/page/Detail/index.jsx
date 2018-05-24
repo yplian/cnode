@@ -41,7 +41,8 @@ class Detail extends Component {
     // 跳转锚点
     setTimeout(()=>{
       if(this.props.location.hash){
-        this.tohref.click()
+        let el = this.props.location.hash.replace('#','');
+        document.getElementById(el).scrollIntoView();
       }
     },500)
   }
@@ -58,8 +59,8 @@ class Detail extends Component {
           icon={<Icon type="left" />}
           onLeftClick={() => this.props.history.goBack()}
         >{headTxt(data.tab)}</NavBar>
-
-        <a ref={(v)=>{this.tohref=v}} href={this.props.location.hash} style={{height:'0',display:'none'}}>锚点</a>
+        
+        {/* <a ref={(v)=>{this.tohref=v}} href={`${this.props.location.hash}`} style={{height:'0',display:'none'}}>锚点</a> */}
 
         <Loading height={height} isShow={!isShow} />
 

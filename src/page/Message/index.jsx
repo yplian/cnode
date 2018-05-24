@@ -25,7 +25,7 @@ class Message extends Component {
         >信息</NavBar>
         <div style={{height:this.state.height,overflowY:'auto'}}>
           <p className="padding-LR20 font-gray">未读消息</p>
-          <ul className="bg-white">
+          <ul className="bg-white ulnone">
           {
             hasnot_read_messages.length > 0 ?(
               hasnot_read_messages.map((item,i)=>{
@@ -44,7 +44,7 @@ class Message extends Component {
           </ul>
 
           <p className="padding-LR20 font-gray">已读消息</p>
-          <ul className="bg-white">
+          <ul className="bg-white ulnone">
           {
             has_read_messages.length > 0 ?(
               has_read_messages.map((item,i)=>{

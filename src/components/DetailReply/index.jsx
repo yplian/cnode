@@ -12,23 +12,21 @@ class DetailReply extends Component{
     this.state = {
       hidden: false,
       upsicon: false,
-      upsnum: 0
+      upsnum: 0,
+      isInit: false
     }
   }
   componentWillMount(){
-    let upsicon = this.props.floorData.is_uped;
-    let upsnum = this.props.floorData.ups.length;
-    this.setState({
-      upsicon: upsicon,
-      upsnum: upsnum,
-    })
+    this.setState({isInit:true});
   }
-  shouldComponentUpdate(nextProps){
-    if(nextProps.floorData.author.loginname===''){
-      return false;
-    }else{
-      return true;
+  componentWillReceiveProps(nextProps){
+    if(this.state.isInit){
+      this.setState({
+        upsicon: nextProps.floorData.is_uped,
+        upsnum: nextProps.floorData.ups.length,
+      })
     }
+    
   }
   handleClick(type){
     const {floorData,loginname} =this.props;
@@ -53,6 +51,7 @@ class DetailReply extends Component{
   render(){
     const {content,author,create_at,id} = this.props.floorData;
     const {hidden,upsicon,upsnum} = this.state;
+    
     return(
       <Flex className="replay" id={id}>
         <div className="replay-author-img">

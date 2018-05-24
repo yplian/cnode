@@ -7,9 +7,9 @@ class Message extends Component {
     super(props);
     this.state={
       height:parseInt((document.documentElement.clientHeight -50 -45),10) +'px',
-      tabValue: ['dev'],
-      txtValue: '测试标题',
-      areaValue: '测试文本',
+      tabValue: ['ask'],
+      txtValue: '',
+      areaValue: '',
     }
   }
   submitValue(){
@@ -40,12 +40,8 @@ class Message extends Component {
           value: 'share',
         },
         {
-          label: '工作',
+          label: '招聘',
           value: 'job',
-        },
-        {
-          label: '测试',
-          value: 'dev',
         },
       ]
     ];

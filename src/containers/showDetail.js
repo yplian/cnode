@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { getDetail, detailIsSuc,tabBar,postDetailUps,postDetailReply,postTopicCollect,postTopicDeCollect } from '../actions'
+import { getDetail, detailIsSuc,tabBar,postDetailUps,postDetailReply,postTopicCollect,postTopicDeCollect, topicDeCollect, topicCollect } from '../actions'
 import Detail from '../page/Detail'
 import Tools from '../utils'
 
@@ -35,7 +35,11 @@ const mapDispatchToProps = (dispatch, ownProps) => {
       // 收藏
       let accesstoken = Tools.localItem('accesstoken');
       let id = ownProps.match.params.id;
-      bool?dispatch(postTopicDeCollect(accesstoken,id)):dispatch(postTopicCollect(accesstoken,id))
+      if(accesstoken){
+         bool?dispatch(postTopicDeCollect(accesstoken,id)):dispatch(postTopicCollect(accesstoken,id))
+      }else{
+        ownProps.history.push('/login')
+      }
     },
     discuss: (content,reply_id) => {
       // 判断用户是否登录，未登录时跳转登录页面
@@ -55,6 +59,14 @@ const mapDispatchToProps = (dispatch, ownProps) => {
       }else{
         ownProps.history.push('/login');
       }
+    },
+    resetCollect: ()=>{
+      // 重置收藏状态
+      dispatch(topicCollect(false))
+    },
+    resetDeCollect: ()=>{
+      // 重置取消收藏状态
+      dispatch(topicDeCollect(false))
     }
   }
 }

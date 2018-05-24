@@ -42,7 +42,6 @@ class TopicItem extends Component{
               }
             </div>
             <Flex.Item className="item-title">
-              
               <Link to={`/topics/${id}`}  title={title}>{title}</Link>
             </Flex.Item>
             <div className="item-info">

@@ -28,11 +28,6 @@
 .font-org{
     color: rgb(255, 91, 5);
 }
-ul,li{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
 .padding-LR15{
     padding: 0 15px;
 }
@@ -45,7 +40,11 @@ ul,li{
 .border-bottom{
     border-bottom: 1px solid #ccc;
 }
-
+.ulnone{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
 /* list-item */
 .list-item{
     height: 98%;

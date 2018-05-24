@@ -7,7 +7,7 @@ import baseurl from "../utils/baseurl";
 import Tools from "../utils";
 import { saveUserKey, postCheckUser, getMessage } from '../actions';
 
-const Home = asyncComponent(() => import("../page/Home"));
+const Home = asyncComponent(() => import("../components/Home"));
 const Topics = asyncComponent(() => import("../containers/showTopic"));
 const Detail = asyncComponent(() => import("../containers/showDetail"));
 const Login = asyncComponent(() => import("../containers/showLogin"));
@@ -32,7 +32,7 @@ class RouterConfig extends Component{
               {/* /  => topics */}
               <Route exact path='/' render={() => <Redirect to='/topics' />} /> 
               {/* 首页 */}
-              <Route path="/topics" component={Topics}/>
+              <Route exact path="/topics" component={Topics}/>
               <Route path="/topics/:id" component={Detail}/>
               {/* 我的 */}
               <Route path="/mine" render={() => (

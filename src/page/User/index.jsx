@@ -55,7 +55,7 @@ class User extends Component {
             <WhiteSpace size="md" />
             <div className="padding-LR15 font-gray">创建的主题</div>
             <WhiteSpace size="md" />
-            <ul className="bg-white">
+            <ul className="bg-white ulnone">
             {
               recent_topics.length > 0 ?(
                 recent_topics.map((item,i)=>{
@@ -72,7 +72,7 @@ class User extends Component {
             <WhiteSpace size="md" />
             <div className="padding-LR15 font-gray">回复的主题</div>
             <WhiteSpace size="md" />
-            <ul className="bg-white">
+            <ul className="bg-white ulnone">
             {
               recent_replies.length > 0 ?(
                 recent_replies.map((item,i)=>{

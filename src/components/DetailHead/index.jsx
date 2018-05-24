@@ -1,4 +1,5 @@
 import React,{ Component } from 'react';
+import { Toast } from "antd-mobile";
 import './style.css'
 
 import Tools from "../../utils";
@@ -7,40 +8,48 @@ class DetailHead extends Component{
   constructor(props){
     super(props);
     this.state = {
-      isCollect:false
+      isCollect:false,
+      isInit:false
     }
     this.isClick = false;
   }
   componentWillMount(){
-    // console.log(this.props.data.is_collect);
-    this.setState({isCollect:this.props.data.is_collect})
+    // console.log(this.props.data.is_collect,this.state.isCollect,'componentDidMount');
+    this.setState({isCollect:this.props.data.is_collect,isInit:true})
   }
   targetCollect(){
     const {isCollect} = this.state;
-    // console.log(isCollect);
     this.props.targetCollect(isCollect)
     this.setState({
       isCollect:!isCollect
     })
     this.isClick = true;
   }
-  /* componentWillReceiveProps(nextProps){
-    if(this.isClick){
-      nextProps.collectISuc ? console.log(1) : console.log(0)
-      this.isClick = false;
+  componentWillReceiveProps(nextProps){
+    // console.log(nextProps,this.state.isCollect,'componentWillReceiveProps')
+    const {isInit} = this.state;
+    if(isInit){
+      this.setState({isCollect:nextProps.data.is_collect,isInit:false})
     }
-    // console.log(nextProps,'componentWillReceiveProps')
   }
-  componentWillUpdate(nextProps,nextStates){
-    // console.log(nextProps,'componentWillUpdate')
-  } */
+  componentDidUpdate(nextProps,nextState){
+    const {collectISuc,deCollectISuc} = this.props;
+    if(this.isClick){
+      if(collectISuc){
+        Toast.info('收藏成功 ~.~',1);
+        this.props.resetCollect();
+      }else{}
+      if(deCollectISuc){
+        Toast.info('取消收藏 >.<',1);
+        this.props.resetDeCollect();         
+      }else{}
+    }
+    
+  }
   render(){
     const {title,visit_count,create_at} = this.props.data;
     const {loginname} = this.props.data.author;
     const {isCollect} = this.state;
-
-    // const {collectISuc,deCollectISuc} = this.props;
-    // console.log(collectISuc,deCollectISuc,'render')
     return(
       <div className="head">
         <h2>{title}</h2>
@@ -56,7 +65,7 @@ class DetailHead extends Component{
             </i>
           </span>
         </div>
-        
+
       </div>
     )
   }
