@@ -7,8 +7,22 @@ import store from '../../store'
 import './style.css'
 
 class TopicList extends Component{
+  constructor(props){
+    super(props);
+    this.states={}
+  }
+  componentWillMount(){
+    this.props.changeTab(this.props.tab)
+  }
   render(){
-    const {data} = this.props;
+    let data = null;
+    switch(this.props.tab){
+      case 'all':  data = this.props.data;break;
+      case 'share':  data = this.props.shareData;break;
+      case 'ask':  data = this.props.askData;break;
+      case 'job':  data = this.props.jobData;break;
+      default:  data = this.props.data;break;
+    }
     return(
       <div ref={(box)=>this.box = box} style={{overflowY:'auto',height:'100%'}}>
         <ul className='tab-item ulnone'>
@@ -36,7 +50,6 @@ class TopicList extends Component{
   componentDidMount(){
     const {tab} = this.props;
     this.box.addEventListener('scroll', (e) => {
-        // _this.handleScroll();
         let box_height = e.target.offsetHeight;
         let scroll_top = e.target.scrollTop;
         let doc_height = e.target.scrollHeight;

@@ -21,7 +21,7 @@ class Index extends Component{
     this.props.init()
   }
   render(){
-    const {data,askData,shareData,jobData,loginflag,avatar_url} = this.props;
+    const {loginflag,avatar_url} = this.props;
     return(
       <div style={{height:this.state.height + 45}}>
         <NavBar  
@@ -37,20 +37,23 @@ class Index extends Component{
         <div style={{height:this.state.height}}>
           <Tabs tabs={tabs}
             initialPage={this.props.tabIndex}
+            distanceToChangeTab={0.1}
+            prerenderingSiblingsNumber={false}
             onChange={(tabs, index) => {
-              this.props.changeTab(tabs.tab);
+              // this.props.changeTab(tabs.tab);
+              // 保存当前切换的index
               this.props.changeTabIndex(index);
             }}
             // onTabClick={(tab, index) => {  }}
           >
           
-            <TopicList tab={'all'} data={data} />
+            <TopicList tab={'all'} {...this.props} />
     
-            <TopicList tab={'share'} data={shareData} />
+            <TopicList tab={'share'}  {...this.props} />
       
-            <TopicList tab={'ask'} data={askData} />
+            <TopicList tab={'ask'}  {...this.props} />
 
-            <TopicList tab={'job'} data={jobData} />
+            <TopicList tab={'job'}  {...this.props} />
 
           </Tabs>
           
