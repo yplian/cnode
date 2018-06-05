@@ -43,7 +43,7 @@ class Login extends Component {
 
         <Flex style={{height:'60%'}} justify="center" align="center" direction="column">
           <div style={{width:'80%'}}>
-            <input style={{width:'100%',height:'32px',padding:'0 5px','border':'1px solid #ccc'}} type='text' placeholder='请输入accessToken' defaultValue='8f7f8189-47d2-42f1-a10f-52f9a9dcfbee'  ref={((input)=>{this.accectKey = input})} />
+            <input style={{width:'100%',height:'32px',padding:'0 5px','border':'1px solid #ccc'}} type='text' placeholder='请输入accessToken' defaultValue=''  ref={((input)=>{this.accectKey = input})} />
             
             <WhiteSpace size="lg" />
               <WingBlank><Button size="small" onClick={()=>this.loginIn()} type="primary">登录</Button></WingBlank>
